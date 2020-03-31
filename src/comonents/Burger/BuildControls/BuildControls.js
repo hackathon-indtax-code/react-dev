@@ -32,6 +32,7 @@ const buildControls = props => {
         );
       })}
       <Button
+        onClick={props.showModal}
         disabled={!props.isDisabledPurchase}
         variant="contained"
         color="secondary"
