@@ -13,6 +13,12 @@ const burger = props => {
     });
   });
 
+  burgerIngredientsElement = burgerIngredientsElement ? (
+    burgerIngredientsElement
+  ) : (
+    <div>No ingredients selected</div>
+  );
+
   return (
     <div className={classes.Burger}>
       <BurgerIngredient type="bread-top"></BurgerIngredient>
