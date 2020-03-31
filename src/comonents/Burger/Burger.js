@@ -12,12 +12,18 @@ const burger = props => {
       );
     });
   });
-
-  burgerIngredientsElement = burgerIngredientsElement ? (
-    burgerIngredientsElement
-  ) : (
-    <div>No ingredients selected</div>
-  );
+  //check if ingredients exists:
+  if (burgerIngredientsElement && burgerIngredientsElement.length > 0) {
+    let listlength = burgerIngredientsElement.reduce((prevValue, value) => {
+      return value.length + prevValue;
+    }, 0);
+    burgerIngredientsElement =
+      listlength > 0 ? (
+        burgerIngredientsElement
+      ) : (
+        <div>No Ingredients Selected!</div>
+      );
+  }
 
   return (
     <div className={classes.Burger}>
