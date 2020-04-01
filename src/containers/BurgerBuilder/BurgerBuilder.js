@@ -69,7 +69,11 @@ class BurgerBuilder extends Component {
             showModal={this.state.showOrderSumamryModal}
             hideBckDrop={this.hideBackDropScreen.bind(this)}
           >
-            <OrderSummary ingrediants={this.state.ingredients}></OrderSummary>
+            <OrderSummary
+              totalPrice={this.state.totalPurchasePrice}
+              hideBckDrop={this.hideBackDropScreen.bind(this)}
+              ingrediants={this.state.ingredients}
+            ></OrderSummary>
           </Modal>
         ) : null}
 
