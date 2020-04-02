@@ -1,9 +1,8 @@
 import React from "react";
-import classes from "./BuildControl.module.css";
+import classes from "./BuildControl.css";
 import Button from "@material-ui/core/Button";
 
 const buildControl = props => {
-  console.log(props.isDisabled);
   return (
     <div className={classes.BuildControl}>
       <p className={classes.Label}>{props.label}</p>
